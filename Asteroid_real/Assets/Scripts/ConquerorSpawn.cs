@@ -30,8 +30,9 @@ public class ConquerorSpawn : MonoBehaviour
         theConqueror.fire(mass, direction);
     }
 
-    void ScheduleNextSpawn()
+    public void ScheduleNextSpawn()
     {
+         maxSpawnRateInSeconds = 5f;
         float spawnRateInSeconds;
         if (maxSpawnRateInSeconds > 1f)
         {

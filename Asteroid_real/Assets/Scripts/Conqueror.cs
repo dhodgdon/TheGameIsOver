@@ -12,8 +12,8 @@ public class Conqueror : MonoBehaviour
     Rigidbody2D rigid;
     SpriteRenderer sprite;
     PolygonCollider2D polygon;
-    float speed = 10f;
-    float fireRate = 2f; // Delay between shots
+    float speed = 5f;
+    float fireRate = 0.1f; // Delay between shots
     float nextFireTime; // Time when the next shot can be fired
 
     GameObject player; // Reference to the player GameObject or its position
@@ -57,8 +57,7 @@ public class Conqueror : MonoBehaviour
             if (rigid.mass > 0.7f)
             {
                 Instantiate(Explosion, transform.position, Quaternion.identity);
-                Split();
-                Split();
+                
             }
 
             Destroy(gameObject); // Destroy the conqueror
