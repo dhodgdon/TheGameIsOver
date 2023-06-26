@@ -47,6 +47,14 @@ public class Conqueror : MonoBehaviour
         rigid.AddTorque(Random.Range(-4f, 4f));
     }
 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Boundary")
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Bullet2") && !isDestroyed)
@@ -61,6 +69,13 @@ public class Conqueror : MonoBehaviour
             }
 
             Destroy(gameObject); // Destroy the conqueror
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Boundary"))
+        {
+            Destroy(this.gameObject);
         }
     }
 

@@ -12,6 +12,7 @@ TagManager:
   - Conqueror
   - Bullet2
   - EnemyBullet
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - Conqueror
   - Bullet2
   - EnemyBullet
-  - 
+  - Boss
   - 
   - 
   - 

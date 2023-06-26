@@ -28,7 +28,7 @@ public class Player2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Bullet2 theBullet2 = Instantiate(Bullet2, transform.position, Quaternion.identity);
-            theBullet2.fire(transform.up);
+            theBullet2.Fire(transform.up); // Updated method name to "Fire"
         }
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
