@@ -27,8 +27,13 @@ public class C_Player2 : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+<<<<<<< HEAD:Asteroid_real/Assets/Scripts/Player2.cs
+            Bullet2 theBullet2 = Instantiate(Bullet2, transform.position, Quaternion.identity);
+            theBullet2.Fire(transform.up); // Updated method name to "Fire"
+=======
             C_Bullet2 theBullet2 = Instantiate(Bullet2, transform.position, Quaternion.identity);
             theBullet2.fire(transform.up);
+>>>>>>> d676e1363f039411c1c5ff8acf2825917e4bf107:Assets/Scripts/C_Player2.cs
         }
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
