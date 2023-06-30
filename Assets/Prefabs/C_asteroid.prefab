@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3253249407731719097}
   - component: {fileID: 843087979186632280}
   m_Layer: 11
-  m_Name: asteroid
-  m_TagString: Asteroid
+  m_Name: C_asteroid
+  m_TagString: Conqueror
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
