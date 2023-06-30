@@ -15,26 +15,26 @@ public class C_Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRend = GetComponent<SpriteRenderer>();
-        spriteRend.color = new Color(0.1f, 1f, 0.1f, 1f);
+        // spriteRend.color = new Color(0.1f, 1f, 0.1f, 1f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        forceOn = Input.GetKey(KeyCode.W);
+        forceOn = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             C_Bullet theBullet = Instantiate(Bullet, transform.position, Quaternion.identity);
             theBullet.fire(transform.up);
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             transform.RotateAround(transform.position, new Vector3(0, 0, 1), 180f);
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             torqueDirection = 1f;
-        }else if (Input.GetKey(KeyCode.D))
+        }else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             torqueDirection = -1f;
         }
@@ -83,14 +83,14 @@ public class C_Player : MonoBehaviour
     }
     void reset()
     {
-        spriteRend.color = new Color(0f, 1f, 0f, 0.2f);
+        // spriteRend.color = new Color(0f, 1f, 0f, 0.2f);
         transform.position = new Vector2(0f, 0f);
         transform.eulerAngles = new Vector3(0f, 0f, 0f);
         Invoke("turnOnCollisions", 3f);
     }
     void turnOnCollisions()
     {
-        spriteRend.color = new Color(0f, 1f, 0f, 1f);
+        // spriteRend.color = new Color(0f, 1f, 0f, 1f);
         gameObject.layer = LayerMask.NameToLayer("Player");
     }
     
