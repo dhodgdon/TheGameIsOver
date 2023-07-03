@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Obstacle
   - Objective
+  - Asteroid
+  - Conqueror
+  - EnemyBullet
+  - Bullet
+  - Bullet2
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -15,10 +21,10 @@ TagManager:
   - UI
   - Ground
   - Ladder
-  - 
-  - 
-  - 
-  - 
+  - CC_player
+  - CC_missile
+  - CC_conqueror
+  - CC_laser
   - 
   - 
   - 
