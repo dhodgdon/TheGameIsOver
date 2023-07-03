@@ -17,7 +17,7 @@ public class CC_Conqueror : MonoBehaviour {
 
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Laser")) {  
+        if (other.gameObject.layer == LayerMask.NameToLayer("CC_missile")) {  
 
             Instantiate(this.explosion, transform.position, Quaternion.identity);
             
