@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1581e2bc526afdf48ad9697a6d7feec2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Explosion: {fileID: 3077408566765587210, guid: 0eb0173f20a2e004681b927d27b5f36e, type: 3}
+  - EnemyBulletPrefab: {fileID: 2039625337421538415, guid: 6d874b3f7931e8c4b9ba9f1fba81b3f1, type: 3}
+  - FirePoint: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
