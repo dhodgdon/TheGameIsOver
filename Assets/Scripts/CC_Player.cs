@@ -11,18 +11,28 @@ public class CC_Player : MonoBehaviour
     public float speed = 2.0f;
 
     private bool _laserActive;
+    private new Rigidbody2D rigidbody;
+    private new Collider2D collider;
+
+    public bool controlsEnabled;
 
 
 
     private void Update() {
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
-            this.transform.position += Vector3.left * this.speed * Time.deltaTime;
-        } else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
-            this.transform.position += Vector3.right * this.speed * Time.deltaTime;
-        }
+        if (controlsEnabled) {
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
+                if(this.transform.position.x > -3.85f) {
+                this.transform.position += Vector3.left  * this.speed * Time.deltaTime;
+                }
+            } else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
+                if (this.transform.position.x < 3.85f) {
+                this.transform.position += Vector3.right * this.speed * Time.deltaTime;
+                }
+            }
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) {
-            Shoot();
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) {
+                Shoot();
+            }
         }
     }
 
