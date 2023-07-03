@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationTime: 1
+  explosion: {fileID: 574654568628925434, guid: 24e264c14f3d72843897944d2b6b238a, type: 3}
 --- !u!61 &-3801316095640476829
 BoxCollider2D:
   m_ObjectHideFlags: 0

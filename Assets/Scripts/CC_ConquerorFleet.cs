@@ -22,6 +22,8 @@ public class CC_ConquerorFleet : MonoBehaviour
 
     public CC_Projectile missilePrefab;
 
+    public bool cutscenePlaying;
+
 
 
     private void Awake() {
@@ -40,24 +42,28 @@ public class CC_ConquerorFleet : MonoBehaviour
     }
 
     private void Start() {
-        InvokeRepeating(nameof(MissileAttack), this.missileAttackRate, this.missileAttackRate);
+        if (!cutscenePlaying) {
+            InvokeRepeating(nameof(MissileAttack), this.missileAttackRate, this.missileAttackRate);
+        }
     }
 
     private void Update() {
-        this.transform.position += _direction * this.speed.Evaluate(this.percentDead) * Time.deltaTime;
+        if (!cutscenePlaying) {
+            this.transform.position += _direction * this.speed.Evaluate(this.percentDead) * Time.deltaTime;
 
-        Vector3 leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);
-        Vector3 rightEdge = Camera.main.ViewportToWorldPoint(Vector3.right);
+            Vector3 leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);
+            Vector3 rightEdge = Camera.main.ViewportToWorldPoint(Vector3.right);
 
-        foreach(Transform conqueror in this.transform) {
-            if (!conqueror.gameObject.activeInHierarchy) {
-                continue;
-            }
+            foreach(Transform conqueror in this.transform) {
+                if (!conqueror.gameObject.activeInHierarchy) {
+                    continue;
+                }
 
-            if (_direction == Vector3.right && conqueror.position.x >= rightEdge.x) {
-                AdvanceRow();
-            } else if (_direction == Vector3.left && conqueror.position.x <= leftEdge.x) {
-                AdvanceRow();
+                if (_direction == Vector3.right && conqueror.position.x >= rightEdge.x) {
+                    AdvanceRow();
+                } else if (_direction == Vector3.left && conqueror.position.x <= leftEdge.x) {
+                    AdvanceRow();
+                }
             }
         }
     }
