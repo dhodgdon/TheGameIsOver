@@ -15,7 +15,7 @@ public class CC_Conqueror : MonoBehaviour {
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-
+//logic for making explosions occur when the conqueror is shot by the missle.
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.layer == LayerMask.NameToLayer("CC_missile")) {  
 
