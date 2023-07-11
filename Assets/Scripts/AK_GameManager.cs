@@ -8,6 +8,7 @@ public class AK_GameManager : MonoBehaviour
     private int level;
     private int lives;
     private int score;
+    private int conquerorsDestroyed;
     
     private void Start()
     {
@@ -19,6 +20,8 @@ public class AK_GameManager : MonoBehaviour
     {
         lives = 3;
         score = 0;
+
+        conquerorsDestroyed = 0;
 
         LoadLevel(1);
     }
@@ -58,6 +61,25 @@ public class AK_GameManager : MonoBehaviour
         else
         {
             LoadLevel(1);
+        }
+    }
+
+    public void CC_LevelComplete()
+    {
+        conquerorsDestroyed++;
+
+        if (conquerorsDestroyed >= 5) {
+            LoadLevel(4);
+            // int nextLevel = level + 1;
+
+            // if (nextLevel < SceneManager.sceneCountInBuildSettings)
+            // {
+            //     LoadLevel(nextLevel);
+            // }
+            // else
+            // {
+            //     LoadLevel(1);
+            // }
         }
     }
 
