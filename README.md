@@ -17,10 +17,10 @@ This project is a game that ties together classic games in a new way. We followe
 
 # Collaborators
 
-Spencer Wadsworth
-Kaler Sappington
-Jacob Briggs
-Dallin Hodgdon
+* Spencer Wadsworth
+* Kaler Sappington
+* Jacob Briggs
+* Dallin Hodgdon
 
 # Useful Websites
 
