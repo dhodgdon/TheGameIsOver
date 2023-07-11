@@ -78,7 +78,8 @@ public class CC_ConquerorFleet : MonoBehaviour
     private void ConquerorKilled() {
         this.deadConquerors++;
         if (deadConquerors == totalConquerors) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            FindObjectOfType<AK_GameManager>().LevelComplete();
         }
     }
 
