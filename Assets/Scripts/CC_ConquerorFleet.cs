@@ -81,7 +81,7 @@ public class CC_ConquerorFleet : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
-//logic to fire laser as there are fewer and fewer ships
+//logic for conquerors to attack player
     private void MissileAttack() {
         foreach(Transform conqueror in this.transform) {
             if (!conqueror.gameObject.activeInHierarchy) {
