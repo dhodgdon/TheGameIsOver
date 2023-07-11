@@ -6,7 +6,7 @@ We created this project both for fun and to learn how to use Unity to develop ga
 
 This project is a game that ties together classic games in a new way. We followed tutorials to learn the basic game structure of each game and then added our own logic and sprites. The game follows a llama as the protagonist, who must fight back alien invaders who are attacking the llama kingdom. Each mini-game in the overall game helps him get a little closer to realizing this goal!
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/c66EMTVGkzo)
 
 # Development Environment
 
