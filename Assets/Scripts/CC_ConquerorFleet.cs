@@ -46,7 +46,7 @@ public class CC_ConquerorFleet : MonoBehaviour
             InvokeRepeating(nameof(MissileAttack), this.missileAttackRate, this.missileAttackRate);
         }
     }
-
+//updates position of conquerors
     private void Update() {
         if (!cutscenePlaying) {
             this.transform.position += _direction * this.speed.Evaluate(this.percentDead) * Time.deltaTime;
@@ -67,14 +67,14 @@ public class CC_ConquerorFleet : MonoBehaviour
             }
         }
     }
-
+//logic to make the fleet move down
     private void AdvanceRow() {
         _direction.x *= -1.0f;
         Vector3 position = this.transform.position;
         position.y -= 0.15f;
         this.transform.position = position;
     }
-
+//logic for if conqueror is destroyed
     private void ConquerorKilled() {
         this.deadConquerors++;
         if (deadConquerors == totalConquerors) {
@@ -82,7 +82,7 @@ public class CC_ConquerorFleet : MonoBehaviour
             FindObjectOfType<AK_GameManager>().LevelComplete();
         }
     }
-
+//logic to fire laser as there are fewer and fewer ships
     private void MissileAttack() {
         foreach(Transform conqueror in this.transform) {
             if (!conqueror.gameObject.activeInHierarchy) {
