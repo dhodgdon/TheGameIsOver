@@ -844,8 +844,8 @@ MonoBehaviour:
   - {fileID: -4338902669416761179, guid: 97779d4d37eb55f4d81fad7b1f0692b5, type: 3}
   - {fileID: -4338902669416761179, guid: 97779d4d37eb55f4d81fad7b1f0692b5, type: 3}
   - {fileID: 5329985965040552525, guid: 850b87b145ff32e4284a02da40885a9f, type: 3}
-  rows: 5
-  cols: 11
+  rows: 3
+  cols: 5
   speed:
     serializedVersion: 2
     m_Curve:
