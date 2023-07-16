@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/LLAMMASS.unity
     guid: f2c846e6c1e141e47a2931fc6e3009eb
   - enabled: 1
-    path: Assets/Scenes/C_Level 1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/AK_Level1.unity
     guid: 3d715688525244b4b96b907806159203
   - enabled: 1
@@ -20,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CC_SpaceInvasion.unity
     guid: ee0b8296b7b093945bb3efa35306bc7e
+  - enabled: 1
+    path: Assets/Scenes/C_Level 1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/TheGameIsOver.unity
     guid: 971613973728c8749bb7870c78899299
