@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class C_Player : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class C_Player : MonoBehaviour
     float forceAmount = 10.0f;
     float torqueDirection = 0.0f;
     float torqueAmount = 0.5f;
+
+    public int killCount = 0;
+    public int winningKillCount;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,6 +30,7 @@ public class C_Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             C_Bullet theBullet = Instantiate(Bullet, transform.position, Quaternion.identity);
+            theBullet.onDestroyAsteroid += incrementKillCount;
             theBullet.fire(transform.up);
         }
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
@@ -34,7 +40,8 @@ public class C_Player : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             torqueDirection = 1f;
-        }else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        }
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             torqueDirection = -1f;
         }
@@ -43,6 +50,12 @@ public class C_Player : MonoBehaviour
             torqueDirection = 0f;
         }
         wrapAroundBoundary();
+
+        // win condition
+        if (killCount == winningKillCount) {
+            FindObjectOfType<AK_GameManager>().LoadLevel(5);
+        }
+
     }
     void wrapAroundBoundary()
     {
@@ -93,5 +106,9 @@ public class C_Player : MonoBehaviour
        //  spriteRend.color = new Color(0f, 1f, 0f, 1f);
         gameObject.layer = LayerMask.NameToLayer("Player");
     }
+
+    void incrementKillCount() {
+        killCount++;
+    }
     
-}
+};

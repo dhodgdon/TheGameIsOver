@@ -7,6 +7,10 @@ public class C_Bullet : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sr;
     float speed = 15f;
+
+    public System.Action onDestroyAsteroid;
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -28,6 +32,7 @@ public class C_Bullet : MonoBehaviour
     {
         if(other.tag == "Asteroid")
         {
+            this.onDestroyAsteroid.Invoke();
             Destroy(gameObject);
         }
     }

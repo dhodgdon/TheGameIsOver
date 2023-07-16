@@ -26,7 +26,12 @@ public class TD_Bullet : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter2D(Collision2D other) {
-		other.gameObject.GetComponent<TD_Health>().TakeDamage(bulletDamage);
-		Destroy(gameObject);
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) {  
+			other.gameObject.GetComponent<TD_Health>().TakeDamage(bulletDamage);
+			Destroy(gameObject);
+		}
+		if (other.gameObject.layer == LayerMask.NameToLayer("Boundary")) {  
+			Destroy(gameObject);
+		}
 	}
 }

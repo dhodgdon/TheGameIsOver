@@ -471,6 +471,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 8003471462331983127, guid: c887d0687b6e85c42a93e6bf593f165f, type: 3}
+  killCount: 0
+  winningKillCount: 5
 --- !u!114 &691211910
 MonoBehaviour:
   m_ObjectHideFlags: 0

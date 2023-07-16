@@ -61,7 +61,9 @@ public class C_Asteroid : MonoBehaviour
             }
 
             Destroy(this.gameObject); // Destroy the asteroid
-            FindObjectOfType<AK_GameManager>().CC_LevelComplete();
+        
+            
+            // FindObjectOfType<AK_GameManager>().CC_LevelComplete();
         }
     }
 

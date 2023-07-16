@@ -30,6 +30,9 @@ public class TD_LevelManager : MonoBehaviour {
 	}
 
 	public bool SpendCurrency(int amount) {
+		if (amount == 1000 && currency >= 1000) {
+			FindObjectOfType<AK_GameManager>().LevelComplete();
+		}
 		if (amount <= currency){
 			currency -= amount;
 			return true;
