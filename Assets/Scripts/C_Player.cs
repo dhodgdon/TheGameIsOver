@@ -74,7 +74,7 @@ public class C_Player : MonoBehaviour
             rb.velocity = Vector2.zero;
             rb.angularVelocity = 0f;
             turnOffCollisions();
-            Invoke("reset", 3f);
+            Invoke("reset", 5f);
         }
     }
     void turnOffCollisions()
@@ -86,11 +86,11 @@ public class C_Player : MonoBehaviour
         // spriteRend.color = new Color(0f, 1f, 0f, 0.2f);
         transform.position = new Vector2(0f, 0f);
         transform.eulerAngles = new Vector3(0f, 0f, 0f);
-        Invoke("turnOnCollisions", 3f);
+        Invoke("turnOnCollisions", 5f);
     }
     void turnOnCollisions()
     {
-        // spriteRend.color = new Color(0f, 1f, 0f, 1f);
+       //  spriteRend.color = new Color(0f, 1f, 0f, 1f);
         gameObject.layer = LayerMask.NameToLayer("Player");
     }
     

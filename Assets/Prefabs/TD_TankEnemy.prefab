@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1649116035}
   - component: {fileID: 2840836895658182646}
   m_Layer: 6
-  m_Name: TankEnemy
+  m_Name: TD_TankEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 923bfbd1b742eea468ed77d9516db4d5, type: 3}
   m_Color: {r: 0.10852019, g: 0.5566038, b: 0.29500583, a: 1}
   m_FlipX: 0
   m_FlipY: 0

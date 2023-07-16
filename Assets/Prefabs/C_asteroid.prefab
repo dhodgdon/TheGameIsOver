@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8376063911636558966}
   - component: {fileID: 3253249407731719097}
   - component: {fileID: 843087979186632280}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: C_asteroid
-  m_TagString: Conqueror
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 0.84, y: 0.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!60 &8376063911636558966

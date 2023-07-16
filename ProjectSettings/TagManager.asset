@@ -12,6 +12,8 @@ TagManager:
   - Bullet
   - Bullet2
   - Boss
+  - Boundary
+  - Background
   layers:
   - Default
   - TransparentFX
@@ -25,11 +27,11 @@ TagManager:
   - CC_missile
   - CC_conqueror
   - CC_laser
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Asteroid
+  - Bullet
+  - Boundary
+  - Ignore
+  - Player
   - 
   - 
   - 
